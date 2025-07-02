@@ -1,5 +1,8 @@
 name: first workflow
-on: workflow_dispatch
+on:
+  push:
+    branches: [main]       # ✅ main 브랜치로 푸시될 때 자동 실행
+  workflow_dispatch:  
 jobs:
   hello_world:
     runs-on: ubuntu-latest
